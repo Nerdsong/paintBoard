@@ -1,35 +1,35 @@
-import React, { useContext, useRef} from 'react'
-import { MouseContext } from '../App';
+import React, {useContext, useRef} from 'react'
 import '../styles/cell.css'
+import { paintColorContext } from '../context.js';
 
-function Cell() {
+function Cell({mouseIsDown}) {
     
-    let painted = false; 
+    const painted = useRef(false); 
     
     const cellRef = useRef();
-
-    const consumeContext = useContext(MouseContext)
-
-    let {mouseIsDown,paintColor} = consumeContext;
+    const {paintColor} = useContext(paintColorContext)
 
     function paintCell(){
 
-        if(painted){
+        if(painted.current){
             cellRef.current.classList.remove("cell-red","cell-black","cell-yellow","cell-green","cell-pink") 
             cellRef.current.classList.add("cell-white")
-            painted=false;
+            painted.current = false;
         }
         else{
+            console.log(paintColor)
             cellRef.current.classList.add(paintColor)
-                painted= true;
+            painted.current= true;
         }
         
     }
 
     function mouseEntered(){
         if(mouseIsDown.current){
+                cellRef.current.classList.remove("cell-red","cell-black","cell-yellow","cell-green","cell-pink") 
+                console.log(paintColor)
                 cellRef.current.classList.add(paintColor)
-                painted= true;
+                painted.current= true;
               
             
         }

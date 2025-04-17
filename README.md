@@ -1,12 +1,5 @@
-# React + Vite
+En este primer commit, pude llevar la aplicacion hasta el punto de poder "pintar" las celdas de un solo color con los eventos de mousedown y mouseup mandejando una referencia para evitar el re renderizado de la aplicacion completa. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+esto me trae problemas al momento de querer seleccionar colores ya que el menu de selector de colores genera un re-renderizado al aparecer y al mismo tiempo sus opciones dispararían un re renderizado. 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Trataré de sacar los estados globales de la app, ponerlos dentro de un elemento "pincel" que maneje todos los estados de mousedown,up, colores, etc etc etc y que mediante un context este se comunique, creo que mantendré el pintado de las celdas con un ref para optimizar la actualizacion del estado, ya que necesito que se pinten nada mas, no necesito reactividad, no tanta. 

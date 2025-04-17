@@ -1,80 +1,33 @@
-import { createContext, useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import CellContainer from './components/cellContainer'
 import './App.css'
 import FloatingMenu from './components/FloatingMenu';
-
-
-export const MouseContext = createContext();
+import { paintColorContext } from './context';
 
 
 function App() {
-  let mouseIsDown = useRef(false)
-  let mousePositionX = useRef (0)
-  let mousePositionY = useRef (0)
   
-  const [colorMenu,setColorMenu] = useState({
-    display: "none",
+  
+  const [displayColorMenu,setDisplayColorMenu] = useState({
+    display: "hidden",
     x: 0,
     y: 0,
   })
 
   const [paintColor,setPaintColor] = useState("cell-red")
 
-function hideMenu (){
-  setColorMenu({display:"none", x:0, y:0});
+
+
+function hideMenu (e){
+  setDisplayColorMenu({display:"hidden"});
 }
 
 
-
-
-  
-  function handleMouseDown(e) {
-    console.log(e)
-    if(e.button === 2){
-      console.log("righ click")
-      setColorMenu({display:"block", x: e.clientX, y: e.clientY })
-    }
-    else{
-      mouseIsDown.current = true
-      console.log(mouseIsDown.current)
-    }
-    
-  }
-
-  function handleMouseUp() {
-    mouseIsDown.current = false
-    console.log(mouseIsDown.current)
-  }
-
-  function handleOnContextMenu(e) {
-    e.preventDefault();
-  }
-
-  useEffect(() => {
-    window.addEventListener("mousedown", handleMouseDown)
-    window.addEventListener("mouseup", handleMouseUp)
-    window.addEventListener("contextmenu",handleOnContextMenu)
-
-    return () => {
-      window.removeEventListener("mousedown", handleMouseDown)
-      window.removeEventListener("mouseup", handleMouseUp)
-      window.removeEventListener("contextmenu",handleOnContextMenu)
-    }
-  }, [])
-
-
-
-
-
-
   return (
-    <>
-    
-      <MouseContext.Provider value = {{mouseIsDown,paintColor,setPaintColor}}>
-      <FloatingMenu x={colorMenu.x} y={colorMenu.y} display={colorMenu.display} hideMenu={hideMenu} /> 
-      <CellContainer/>
-      </MouseContext.Provider>
-    </>
+    <paintColorContext.Provider value = {{paintColor,setPaintColor}}>
+        <FloatingMenu x={displayColorMenu.x} y={displayColorMenu.y} display={displayColorMenu.display} hideMenu={hideMenu} />
+        <CellContainer setColorMenu = {setDisplayColorMenu}/>
+    </paintColorContext.Provider>
   )
 }
 

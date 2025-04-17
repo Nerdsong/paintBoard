@@ -2,7 +2,7 @@ import React from 'react'
 
 function paintHandler() {
   return (
-    <div>paintHandler</div>
+    <div></div>
   )
 }
 

@@ -1,26 +1,31 @@
 import React, { useContext } from 'react'
-import { MouseContext } from '../App';
-
+import {paintColorContext} from "../context.js"
 import "../styles/FloatingMenu.css"
 
 function FloatingMenu({x,y,display,hideMenu}) {
 
-    const context = useContext(MouseContext);
-    const {setPaintColor} = context
+    const {paintColor, setPaintColor }= useContext(paintColorContext)
+
+    function setColor(e){
+        if(e.button === 0){
+            setPaintColor(e.target.id)
+        }
+        else{}
+    }
 
   return (
 
-    <div className='floating-menu' style={{top: `${y}px`, left: `${x}px`, display: `${display}`}} onMouseLeave={hideMenu} >
+    <div className={`floating-menu-${display}`} style={{top: `${y}px`, left: `${x}px`}} onMouseLeave={hideMenu} >
         <div className='color-selector'>
-            <div className='color-red' id="red" onClick={setPaintColor("cell-red")}>
+            <div className='color-box color-red' id="cell-red" onClick={(e) => {setColor(e), hideMenu()}}>
             </div>
-            <div className='color-black'id="black" onClick={setPaintColor("cell-black")}>
+            <div className='color-box color-black'id="cell-black" onClick={(e) => {setColor(e), hideMenu()}}>
             </div>
-            <div className='color-green'id="green" onClick={setPaintColor("cell-green")}>
+            <div className='color-box color-green'id="cell-green" onClick={(e) => {setColor(e), hideMenu()}}>
             </div>
-            <div className='color-pink'id="pink" onClick={setPaintColor("cell-pink")}>
+            <div className='color-box color-pink'id="cell-pink" onClick={(e) => {setColor(e), hideMenu()}}>
             </div>
-            <div className='color-blue'id="blue" onClick={setPaintColor("cell-yellow")}>
+            <div className='color-box color-yellow'id="cell-yellow" onClick={(e) => {setColor(e), hideMenu()}}>
             </div>
         </div>
     </div>
