@@ -1,5 +1,1 @@
-En este primer commit, pude llevar la aplicacion hasta el punto de poder "pintar" las celdas de un solo color con los eventos de mousedown y mouseup mandejando una referencia para evitar el re renderizado de la aplicacion completa. 
-
-esto me trae problemas al momento de querer seleccionar colores ya que el menu de selector de colores genera un re-renderizado al aparecer y al mismo tiempo sus opciones dispararían un re renderizado. 
-
-Trataré de sacar los estados globales de la app, ponerlos dentro de un elemento "pincel" que maneje todos los estados de mousedown,up, colores, etc etc etc y que mediante un context este se comunique, creo que mantendré el pintado de las celdas con un ref para optimizar la actualizacion del estado, ya que necesito que se pinten nada mas, no necesito reactividad, no tanta. 
+Desarrollo para una prueba tecnica. 
