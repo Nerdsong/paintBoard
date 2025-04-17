@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import CellContainer from './components/cellContainer'
+import CellContainer from './components/CellContainer.jsx'
 import './App.css'
 import FloatingMenu from './components/FloatingMenu';
 import { paintColorContext } from './context';
