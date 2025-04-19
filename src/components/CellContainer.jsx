@@ -1,6 +1,6 @@
 import Cell from "./Cell"
 import '../styles/CellContainer.css';
-import {useRef,useEffect} from "react";
+import {useRef,useState,useEffect} from "react";
 
 
 
@@ -44,19 +44,20 @@ function cellContainer({setColorMenu}) {
 
       //-------------------------------------------------------------------
 
-
-
-    const columns = 100 
-    const rows = 150;
+    const [cellCount, setCellCount] = useState(0);
     const cells = []
+    useEffect(() => {
+        const columns = 100;
+        const cellSize = window.innerWidth / columns;
+        const rows = Math.floor(window.innerHeight / cellSize);
+        setCellCount(columns * rows);
+
+    }, []);
     let i;
 
-    for(i=0 ; i < 10000; i++){
-        cells.push(i)
-    }   
-
-    console.log(cells)
-
+    for(i=0 ; i < cellCount; i++){
+          cells.push(i)
+    }
 
   return (
     

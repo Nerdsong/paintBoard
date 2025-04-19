@@ -2,10 +2,9 @@
     justify-self: center;
     align-self: center;
     display: grid;
-    grid-template-columns: repeat(100, 1fr);  
-    grid-template-rows: repeat(200, 1fr);     
+    grid-template-columns: repeat(100, 1fr);     
     box-sizing: content-box;
-    width: 90em;
+    width: 100vw;
     height: 100vh;
     gap: 0px;                                  
     padding: 0;
