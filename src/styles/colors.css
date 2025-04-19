@@ -1,0 +1,84 @@
+.cell-not-painted{
+    background-color: white;
+}
+
+.cell-red {
+    background-color: rgb(255, 52, 52);
+}
+
+.cell-blue {
+    background-color: rgb(46, 46, 248);
+}
+
+.cell-green {
+    background-color: rgb(58, 194, 58);
+}
+
+.cell-yellow {
+    background-color: rgb(255, 255, 0);
+}
+
+.cell-orange {
+    background-color: rgb(255, 165, 0);
+}
+
+.cell-purple {
+    background-color: rgb(128, 0, 128);
+}
+
+.cell-pink {
+    background-color: rgb(255, 192, 203);
+}
+
+.cell-cyan {
+    background-color: rgb(106, 236, 236);
+}
+
+
+.cell-black {
+    background-color: rgb(34, 34, 34);
+}
+
+.cell-white {
+    background-color: rgb(255, 255, 255);
+}
+
+.cell-gray {
+    background-color: rgb(128, 128, 128);
+}
+
+.cell-magenta {
+    background-color: rgb(212, 46, 212);
+}
+
+.cell-lime {
+    background-color: rgb(204, 255, 63);
+}
+
+.cell-olive {
+    background-color: rgb(128, 128, 0);
+}
+
+.cell-teal {
+    background-color: rgb(3, 146, 146);
+}
+
+.cell-navy {
+    background-color: rgb(3, 3, 107);
+}
+
+.cell-indigo {
+    background-color: rgb(68, 1, 116);
+}
+
+.cell-violet {
+    background-color: rgb(172, 72, 172);
+}
+
+.cell-gold {
+    background-color: rgb(221, 192, 27);
+}
+
+.cell-silver {
+    background-color: rgb(218, 205, 205);
+}

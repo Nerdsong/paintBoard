@@ -1,6 +1,9 @@
 import React, {useContext, useRef} from 'react'
-import '../styles/cell.css'
 import { paintColorContext } from '../context.js';
+import { colors } from './colors.js';
+import '../styles/cell.css'
+import "../styles/colors.css"
+
 
 function Cell({mouseIsDown}) {
     
@@ -12,8 +15,10 @@ function Cell({mouseIsDown}) {
     function paintCell(){
 
         if(painted.current){
-            cellRef.current.classList.remove("cell-red","cell-black","cell-yellow","cell-green","cell-pink") 
-            cellRef.current.classList.add("cell-white")
+            colors.forEach(color => {
+                cellRef.current.classList.contains(`cell-${color}`) && cellRef.current.classList.remove(`cell-${color}`)
+            })
+            cellRef.current.classList.add("cell-not-painted");
             painted.current = false;
         }
         else{
@@ -26,7 +31,9 @@ function Cell({mouseIsDown}) {
 
     function mouseEntered(){
         if(mouseIsDown.current){
-                cellRef.current.classList.remove("cell-red","cell-black","cell-yellow","cell-green","cell-pink") 
+            colors.forEach(color => {
+                cellRef.current.classList.contains(`cell-${color}`) && cellRef.current.classList.remove(`cell-${color}`)
+            })
                 console.log(paintColor)
                 cellRef.current.classList.add(paintColor)
                 painted.current= true;

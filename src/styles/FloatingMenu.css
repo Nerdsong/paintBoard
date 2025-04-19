@@ -16,7 +16,7 @@
 .floating-menu-shown{
     background-color: rgba(77, 76, 76, 0.555);
     width: 200px;
-    height: 40px;
+    height: 200px;
     position: fixed;
     z-index: 10;
     display: block;
@@ -31,10 +31,10 @@
 }
 
 .color-selector{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
     width: 100%;
     height: 100%;
-    justify-content: space-around;
     align-items: center;
     border-radius: 20px;
 }
@@ -43,26 +43,9 @@
     width: 23px;
     height: 23px;
     border-radius: 06px; 
+    border: 2px solid rgba(63, 63, 63, 0.774);
 }
 
 .color-box:hover{
     border: 2px solid rgb(255, 255, 255);
-}
-
-
-.color-red{
-    background-color: rgb(255, 78, 78);
-}
-.color-black{
-    background-color: rgb(34, 34, 34)
-}
-
-.color-pink{
-    background-color: rgb(255, 129, 234);
-}
-.color-green{
-    background-color: rgb(58, 224, 197); 
-}
-.color-yellow{
-    background-color: rgb(238, 219, 51);
 }

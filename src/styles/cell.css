@@ -9,24 +9,3 @@
     -webkit-user-drag: none;
 }
 
-.cell-white{
-    background-color: white;
-}
-
-.cell-red{
-    background-color: rgb(255, 78, 78);    
-}
-
-.cell-black{
-    background-color: rgb(34, 34, 34);   
-}
-
-.cell-yellow{
-    background-color: rgb(238, 219, 51);   
-}
-.cell-green{
-    background-color: rgb(58, 224, 197);   
-}
-.cell-pink{
-    background-color: rgb(255, 129, 234);   
-}
