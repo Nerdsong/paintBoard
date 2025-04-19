@@ -1,7 +1,7 @@
 .floating-menu-hidden{
     background-color: rgba(177, 177, 177, 0.445);
     width: 200px;
-    height: 40px;
+    height: 200px;
     position: fixed;
     z-index: 10;
     display: block;
