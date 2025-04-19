@@ -1,22 +1,22 @@
 export const colors = [
-    "red",
-    "blue",
-    "green",
-    "yellow",
-    "orange",
-    "purple",
-    "pink",
-    "cyan",
-    "black",
-    "white",
-    "gray",
-    "magenta",
-    "lime",
-    "olive",
-    "teal",
-    "navy",
-    "indigo",
-    "violet",
-    "gold",
-    "silver"
-  ];
+  "red",        // Reds
+  "orange",     
+  "gold",       
+  "yellow",     
+  "lime",       // Greens
+  "green",      
+  "olive",      
+  "teal",       // Teal/Cyan
+  "cyan",       
+  "blue",       // Blues
+  "navy",       
+  "indigo",     
+  "purple",     
+  "violet",     
+  "magenta",    // Pinks/Purples
+  "pink",       
+  "silver",     // Grays/Neutrals
+  "gray",       
+  "white",      
+  "black"       
+];
