@@ -2,16 +2,28 @@
     background-color: white;
 }
 
+.cell-super-red {
+    background-color: rgb(214, 1, 1);
+}
+
 .cell-red {
-    background-color: rgb(255, 52, 52);
+    background-color: rgb(255, 0, 0);
 }
 
 .cell-blue {
     background-color: rgb(46, 46, 248);
 }
 
+.cell-soft-blue{
+    background-color: rgb(128, 179, 234);
+}
+
 .cell-green {
     background-color: rgb(58, 194, 58);
+}
+
+.cell-soft-green {
+    background-color: hsl(138, 100%, 76%)
 }
 
 .cell-yellow {
@@ -26,7 +38,11 @@
     background-color: rgb(128, 0, 128);
 }
 
-.cell-pink {
+.cell-pink{
+    background-color: rgb(255, 68, 207);
+}
+
+.cell-soft-pink {
     background-color: rgb(255, 192, 203);
 }
 
@@ -59,6 +75,10 @@
     background-color: rgb(128, 128, 0);
 }
 
+.cell-brown{
+    background-color: rgb(176, 96, 32);
+}
+
 .cell-teal {
     background-color: rgb(3, 146, 146);
 }
@@ -81,4 +101,12 @@
 
 .cell-silver {
     background-color: rgb(218, 205, 205);
+}
+
+.cell-beige{
+    background-color: #FFEccF;
+}
+
+.cell-bordo{
+    background-color: rgb(156, 12, 38);
 }
