@@ -4,7 +4,7 @@ import {colors} from "./colors.js"
 import "../styles/FloatingMenu.css"
 import "../styles/colors.css"
 
-function FloatingMenu({x,y,display,hideMenu}) {
+function FloatingMenu({x,y,display,hideMenu,givenWidth}) {
 
     const {paintColor, setPaintColor }= useContext(paintColorContext)
 
@@ -19,7 +19,7 @@ function FloatingMenu({x,y,display,hideMenu}) {
 
   return (
 
-    <div className={`floating-menu-${display}`} style={{top: `${y}px`, left: `${x}px`}} onMouseLeave={hideMenu} >
+    <div className={`floating-menu-${display}`} style={{top: `${y}px`, left: `${x}px`, width: `${givenWidth}px`}} onMouseLeave={hideMenu} >
         <div className='color-selector'>
             {colors.map((color) => (
                 <div className={`color-box cell-${color}`} id={`cell-${color}`} onClick={(e) => {setColor(e), hideMenu()}}>

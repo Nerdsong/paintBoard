@@ -1,7 +1,5 @@
 .floating-menu-hidden{
     background-color: rgba(177, 177, 177, 0.445);
-    width: 200px;
-    height: 200px;
     position: fixed;
     z-index: 10;
     display: block;
@@ -11,12 +9,12 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     pointer-events: none;
+    aspect-ratio: 1;
+    width: auto;
 }
 
 .floating-menu-shown{
     background-color: rgba(77, 76, 76, 0.555);
-    width: 200px;
-    height: 200px;
     position: fixed;
     z-index: 10;
     display: block;
@@ -28,6 +26,8 @@
     padding: 10px;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
+    aspect-ratio: 1;
+    width: auto;
 }
 
 .color-selector{
@@ -36,7 +36,10 @@
     width: 100%;
     height: 100%;
     align-items: center;
+    justify-items: center;
     border-radius: 20px;
+    align-self: center;
+    
 }
 
 .color-box{

@@ -12,9 +12,10 @@ function App() {
     display: "hidden",
     x: 0,
     y: 0,
+    width:0
   })
 
-  const [paintColor,setPaintColor] = useState("cell-red")
+  const [paintColor,setPaintColor] = useState("cell-black")
 
 
 
@@ -25,7 +26,7 @@ function hideMenu (e){
 
   return (
     <paintColorContext.Provider value = {{paintColor,setPaintColor}}>
-        <FloatingMenu x={displayColorMenu.x} y={displayColorMenu.y} display={displayColorMenu.display} hideMenu={hideMenu} />
+        <FloatingMenu x={displayColorMenu.x} y={displayColorMenu.y} display={displayColorMenu.display} givenWidth={displayColorMenu.width} hideMenu={hideMenu} />
         <CellContainer setColorMenu = {setDisplayColorMenu}/>
     </paintColorContext.Provider>
   )

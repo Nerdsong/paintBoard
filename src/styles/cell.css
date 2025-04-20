@@ -1,7 +1,7 @@
 .cell{
 
     aspect-ratio: 1;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.39);
     margin: 0px 0px;
     padding: 0px 0px;
     background-color: white;
