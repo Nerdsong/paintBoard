@@ -22,7 +22,7 @@ function FloatingMenu({x,y,display,hideMenu,givenWidth}) {
     <div className={`floating-menu-${display}`} style={{top: `${y}px`, left: `${x}px`, width: `${givenWidth}px`}} onMouseLeave={hideMenu} >
         <div className='color-selector'>
             {colors.map((color) => (
-                <div className={`color-box cell-${color}`} id={`cell-${color}`} onClick={(e) => {setColor(e), hideMenu()}}>
+                <div className={`color-box cell-${color}`} style={{width:`${givenWidth/10}px`}} id={`cell-${color}`} onClick={(e) => {setColor(e), hideMenu()}}>
                 </div>
             ))}
             
